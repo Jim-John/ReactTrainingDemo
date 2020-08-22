@@ -1,0 +1,1 @@
+json-server --port 7000 --routes routes.json --watch claim.json

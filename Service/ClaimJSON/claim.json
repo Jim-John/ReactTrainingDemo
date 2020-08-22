@@ -1,0 +1,54 @@
+{
+  "claims": [
+    {
+      "emp_id": "1234",
+      "emp_name": "Savio",
+      "claim_number": "123-123-12A",
+      "claim_type": "Received",
+      "claim_program": "sample claim",
+      "start_date": "2020-07-16",
+      "end_date": "2020-08-21",
+      "id": 1234
+    },
+    {
+      "emp_id": "1235",
+      "emp_name": "Alex",
+      "claim_number": "123-123-12B",
+      "claim_type": "Received",
+      "claim_program": "sample claim",
+      "start_date": "2020-07-16",
+      "end_date": "2020-07-17",
+      "id": 1235
+    },
+    {
+      "emp_id": "1236",
+      "emp_name": "Manu",
+      "claim_number": "123-123-12C",
+      "claim_type": "Paid",
+      "claim_program": "sample claim",
+      "start_date": "2020-07-18",
+      "end_date": "2020-07-19",
+      "id": 1236
+    },
+    {
+      "emp_id": "1237",
+      "emp_name": "Jibu",
+      "claim_number": "123-123-12D",
+      "claim_type": "Rejected",
+      "claim_program": "sample claim",
+      "start_date": "2020-07-01",
+      "end_date": "2020-07-01",
+      "id": 1237
+    },
+    {
+      "emp_id": "1238",
+      "emp_name": "Lince",
+      "claim_number": "123-123-12E",
+      "claim_type": "Received",
+      "claim_program": "sample claim",
+      "start_date": "2020-07-12",
+      "end_date": "2020-07-15",
+      "id": 1238
+    }
+  ]
+}

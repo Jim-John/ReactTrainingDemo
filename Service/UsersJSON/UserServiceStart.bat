@@ -1,0 +1,1 @@
+json-server --port 7001 --routes routes.json --watch users.json

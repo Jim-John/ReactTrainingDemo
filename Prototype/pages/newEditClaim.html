@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Claim Processing</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/inputmask.min.js" integrity="sha512-56Uvw3Sr7mMj31iQud4fRxaVMYhdiTtXymwyJbWqJ2ojqYY1dHS04tcIuZgc5CZ7vlcJOUr+jovS4b70rYN2XA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/bindings/inputmask.binding.min.js" integrity="sha512-TGXLFBp6KE2kQHdH2lH1ysWKWKeuV013LpSktndHu9j3fT8tI7kqz4bWiOIIyFdn3Q65RcdrT/OkdL4LJPEGXQ==" crossorigin="anonymous"></script>
+  <script src=../js/date.js></script>
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" type="text/css" href="../css/TableCss.css">
+  <link rel="stylesheet" type="text/css" href="../css/utilEdit.css">
+  <link rel="stylesheet" type="text/css" href="../css/mainEdit.css">
+  
+</head>
+<body >
+  <div style="width: 100%;height: 50px;background-color: #555;display:inline-block"" >
+
+    <div  style="text-align: center; ;font-size:32px ; 
+    font-weight: bold;color:white;vertical-align: middle;display:inline-block;width: 90%"">
+    Claim Management System
+    </div>
+   <div style="display:inline-block">
+     <div id="loggedInUser"style="text-align:right;font-size:12px ;font-weight: bold;color:white;vertical-align: middle;"></div>
+     <div id="datetime" style="text-align: right; ;font-size:12px ; 
+     font-weight: bold;color:white;vertical-align: middle;"" ></div>
+
+   </div>
+</div>
+    
+<nav class="navbar navbar-inverse">
+    
+  <div class="container-fluid">
+   
+    <div class="collapse navbar-collapse" id="myNavbar">
+        
+     
+      <ul class="nav navbar-nav">
+        <li class="inactive"><a href="#"></a></li>
+        <li class="inactive"><a href="#"></a></li>
+        <li class="inactive"><a href="#"></a></li>
+        
+        
+        
+        <li ><a href="./layout.html">Home</a></li>
+        <li class="active"><a href="./newViewClaim.html">Claims View</a></li>
+        <li><a href="./aboutus.html">About</a></li>
+        <li><a href="./contactus.html">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" onclick="window.print()"><span class="glyphicon glyphicon-print"></span> Print</a></li>
+        <li><a href="./login.html"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-1 sidenav" style="width:10%">
+        <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <div class="col-sm-8 text-left divwidthandpadding" > 
+        
+            <div class="wrap-contact100" >
+                <form class="contact100-form validate-form" name="editClaim" action="./sucess.html">
+                    <span class="contact100-form-title">
+                        Edit Claim
+                    </span>
+    
+                    <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Employee ID</span>
+                        <input class="input100" type="text" name="empId" value="1"  readonly>
+                        
+                    </div>
+                    <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Employee Name</span>
+                        <input class="input100" type="text" name="empName" value="1"  readonly>
+                        
+                    </div>
+                    <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Claim Number </span>
+                        <input class="input100" type="text" name="claimNo" id="claimNo" 
+                         maxlength="9"  placeholder = "XXX-XXX-XXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                         required onblur="fnClaimNoMaksing();">
+                        
+                    </div>
+                    <div class="wrap-input100 input100-select">
+                        <span class="label-input100">Claim Type</span>
+                        <div>
+                            <select class="form-control" name="service">
+                                <option>Submitted</option>
+                                <option>Received</option>
+                                <option>Pending</option>
+                                <option>More Info Required</option>
+                                <option>Denied</option>
+                                <option>Rejected</option>
+                                <option>Paid</option>
+                            </select>
+                        </div>
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Claim Programs</span>
+                        <input class="input100" type="text" name="claimPgm" maxlength="9"  placeholder = "Claim Programs – Maximum length of 20 characters" >
+                        
+                    </div>
+    
+                    <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Claim Start Date </span>
+                        <input type="date" id="claimStartDate" name="claimStartDate"
+                            value="2020-08-08"">
+                    </div>
+                    <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Claim End Date </span>
+                        <input type="date" id="claimEndtDate" name="claimEndtDate"
+                            value="2020-08-08"">
+                    </div>
+                    
+    
+                    
+    
+                    <div class="container-contact100-form-btn">
+                        <div class="wrap-contact100-form-btn" style="width: 30%; ">
+                            <div class="contact100-form-bgbtn"></div>
+                            <button type="button" class="contact100-form-btn" onclick="submit()">
+                                
+                                    Submit
+                                   
+                            </button>
+                        </div>
+                        <div class="wrap-contact100-form-btn"  style="width: 30%;">
+                            <div class="contact100-form-bgbtn"></div>
+                            <button class="contact100-form-btn" type="button" onclick="funCancel()">
+                                
+                                    Cancel
+                                    
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+
+<footer class="page-footer font-small gray">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="#" style="color:white"> ClaimsManagement.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+
+</body>
+<script src="../js/loggedIn.js"></script>
+</html>

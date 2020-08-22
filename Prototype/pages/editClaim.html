@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V4</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../css/select2/select2.min.css">
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../css/util.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+<!--===============================================================================================-->
+</head>
+<script>
+	function submit()
+	{
+		window.location.href="./sucess.html"
+	}
+</script>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Edit Claim
+				</span>
+
+				<div class="wrap-input100 validate-input" >
+					<span class="label-input100">Employee ID</span>
+					<input class="input100" type="text" name="empId" value="1"  readonly>
+					
+				</div>
+				<div class="wrap-input100 validate-input" >
+					<span class="label-input100">Employee Name</span>
+					<input class="input100" type="text" name="empName" value="1"  readonly>
+					
+				</div>
+				<div class="wrap-input100 validate-input" >
+					<span class="label-input100">Claim Number </span>
+					<input class="input100" type="text" name="claimNo"  maxlength="9"  placeholder = "XXX-XXX-XXX">
+					
+				</div>
+				<div class="wrap-input100 input100-select">
+					<span class="label-input100">Claim Type</span>
+					<div>
+						<select class="selection-2" name="service">
+							<option>Submitted</option>
+							<option>Received</option>
+							<option>Pending</option>
+							<option>More Info Required</option>
+							<option>Denied</option>
+							<option>Rejected</option>
+							<option>Paid</option>
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" >
+					<span class="label-input100">Claim Programs</span>
+					<input class="input100" type="text" name="claimPgm" maxlength="9"  placeholder = "Claim Programs – Maximum length of 20 characters" >
+					
+				</div>
+
+				<div class="wrap-input100 validate-input" >
+					<span class="label-input100">Claim Start Date </span>
+					<input type="date" id="start" name="claimStartDate"
+						value="2020-08-08"">
+				</div>
+                <div class="wrap-input100 validate-input" >
+					<span class="label-input100">Claim End Date </span>
+					<input type="date" id="start" name="claimEndtDate"
+						value="2020-08-08"">
+				</div>
+				
+
+				
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn" style="width: 30%;">
+						<div class="contact100-form-bgbtn"></div>
+						<button type="button" class="contact100-form-btn" onclick="submit()">
+							<span>
+								Submit
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</button>
+					</div>
+					<div class="wrap-contact100-form-btn"  style="width: 30%;">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn">
+							<span>
+								Cancel
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="../css/jquery/jquery-3.2.1.min.js"></script>
+
+	<script src="../css/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+
+	<script src="../css/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+
+<!--===============================================================================================-->
+	<script src="../js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+</body>
+</html>

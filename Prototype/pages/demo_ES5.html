@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        // ES5 implementation 
+
+        // create the class in Javascript/ECMASCript 
+
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.property1 = "welcome in wipro";
+            this.property2 = "bye genpact"
+            console.log('person object is init');
+            console.log('Name of the Person-->' + this.name);
+            console.log('Age of the Person-->' + this.age);
+            var myPrivate = "Private Variable";
+
+            // define the public method here 
+
+            // public methods
+            this.method1 = function (arg1) {
+                return arg1 + " " + this.property1;
+            }
+
+            this.method2 = function (arg1) {
+                return arg1 + " " + this.property2;
+            }
+            //priavet method
+            var private_stuf = function () {
+                console.log("Priavate Imple");
+                return myPrivate;
+            }
+            //privilage mthod
+            this.preMethod=function(){
+                console.log('call the previledge method here');
+                return private_stuf();
+            }
+
+        }
+         //Class is over
+
+         //Prototype Method
+         Person.prototype.test=100;
+         Person.prototype.sayHello=function(){
+
+            console.log('add new method in person class');
+            return this.test;
+            }
+        //Static Method
+        // define static keyword here 
+
+        Person.test1=100;
+        Person.testStatic=function(){
+
+            return " I am static";
+        };
+
+        function Student()
+    {
+        this.property4='I am blong to Student 1';
+        this.mthod4=function(arg4)
+        {
+            return arg4+this.property4;
+        }
+    }
+    
+        var p = new Person('Amith', 34);
+        console.log('Calling public methid-->' + p.method1("Anoop "));
+        console.log('Calling public methid-->' + p.method2("Anoop "));
+        //console.log('Calling private methid-->' + p.private_stuf());
+        console.log('Calling private methid-->' + p.preMethod());
+        console.log('Calling private methid-->' + p.sayHello());
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

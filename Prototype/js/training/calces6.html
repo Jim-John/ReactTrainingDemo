@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+ //Basic  Calculator  Class
+        class BasicCalculator {
+            constructor(firstInput=0, secondInput=0)
+            {
+            this.firstInput = firstInput||0;
+            this.secondInput = secondInput||0;
+            }
+            add () {
+                return firstInput + secondInput;
+            }
+            sub  () {
+                return firstInput - secondInput;
+            }
+            static mul()
+            {
+                return firstInput * secondInput;  
+            }
+        };
+       
+        //Dynmic adding of function.
+        BasicCalculator.prototype.div = function () {
+
+            return this.firstInput / this.secondInput;
+        }
+        
+        // Scientific Calculator  Class
+        function ScientificCalc() {
+            this.square = function (input) {
+                this.input = input||0;
+                return BasicCalculator.mul(input, input);
+
+            }
+            //
+            this.cube = function (input) {
+                return input * input * input;
+                           }
+            this.random=function()
+            {
+              return  Math.random();
+            }                           
+        };
+        //Dynamic Variable
+        ScientificCalc.prototype.PI = 3.14;
+
+        //Packaging the test case
+        var TestCalcSute = {
+
+            TestBasicCalc: function () {
+                this.testBasicOperation = function () {
+                    var basicCalculator = new BasicCalculator(10, 2);
+                   //var basicCalculator = new BasicCalculator();
+                    console.log('Calling add methid-->' + basicCalculator.add());
+                    console.log('Calling add methid-->' + basicCalculator.sub());
+                    console.log('Calling add methid-->' + basicCalculator.div());
+                    console.log('Calling add methid-->' + BasicCalculator.mul(5, 5));
+                    return "Basic Calc Test Case is sucessful."
+                };
+            },
+            TestScientificCalc: function () {
+                this.testScientificCalc = function () {
+                    //Inheritance 
+                    ScientificCalc.prototype = new BasicCalculator(10, 5);
+                    var scientificCalc = new ScientificCalc();
+                    console.log('Calling Scientific Squre Method ' + scientificCalc.square(6));
+                    console.log('Calling Scientific Cube Method ' + scientificCalc.cube(6));
+                    console.log('Calling Scientific Random Method ' + scientificCalc.random());
+                    return "Scientific Calc Test Case is sucessful."
+                };
+            }
+
+        }
+        var basicCalcp = new TestCalcSute.TestBasicCalc();
+        var testScientificCalc = new TestCalcSute.TestScientificCalc();
+        console.log("Calling Test case for Basic calc :" + basicCalcp.testBasicOperation());
+        console.log("Calling Test case for Scientific Calc : " + testScientificCalc.testScientificCalc());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>        

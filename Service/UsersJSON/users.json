@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin",
+      "last_login": "2020-08-11",
+      "login_status": "Pending"
+      
+    },
+    {
+      "username": "1234",
+      "password": "Savio",
+      "last_login": "2020-08-12",
+      "login_status": "Pending"
+    },
+    {
+     "username": "1234",
+      "password": "Savio",
+      "last_login": "2020-08-13",
+      "login_status": "Pending"
+    },
+    {
+      "username": "1234",
+      "password": "Savio",
+      "last_login": "2020-08-21",
+      "login_status": "Pending"
+    },
+    {
+      "username": "1234",
+      "password": "Savio",
+      "last_login": "2020-08-20",
+      "login_status": "Pending"
+    }
+  ]
+}
