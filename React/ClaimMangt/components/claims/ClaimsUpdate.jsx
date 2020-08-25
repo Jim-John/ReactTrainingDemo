@@ -103,7 +103,7 @@ class ClaimsUpdate extends React.Component {
       )
       .then((res) => {
         console.log("res.status", res.status);
-        browserHistory.push("claim");
+        browserHistory.push("success");
       });
   }
 
