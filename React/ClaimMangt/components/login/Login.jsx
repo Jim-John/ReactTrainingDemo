@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Form,Alert,Button,Container,Row,Col } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
 import { Logger } from 'react-logger-lib';
-
+import * as Icon from 'react-bootstrap-icons';
 class LoginForm extends React.Component {
 
   constructor(props) {
