@@ -46,10 +46,10 @@ validateLogin(e) {
 
     return (
       
-      <Form onSubmit={this.validateLogin}>
+      <Form onSubmit={this.validateLogin} >
 	  <div className="row mt-3"/>
         <div className="container-fluid col-sm-4 grid-margin border border-success rounded-sm">
-           <h2> </h2>
+           <h2> </h2><Icon.Log/>
                  <div className="row mt-3"></div>
                 <h4>Sign In</h4>
                 <div className="form-group">

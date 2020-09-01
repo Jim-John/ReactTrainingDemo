@@ -1,9 +1,8 @@
-import React from 'react';
-import Header from './Header.jsx';
-import Footer from './FooterComponent.jsx';
+import React from "react";
+import Header from "./Header.jsx";
+import Footer from "./FooterComponent.jsx";
 
 class App extends React.Component {
-
   constructor(props) {
     super(props);
   }
@@ -17,11 +16,6 @@ class App extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default App;
-
-
-
-
-

@@ -1,0 +1,25 @@
+<testsuites name="jest tests" tests="5" failures="1" time="2.527">
+  <testsuite name="Hackermaps" errors="0" failures="1" skipped="0" timestamp="2020-08-27T09:16:56" time="2.527" tests="5">
+    <testcase classname="Hackermaps Should render all the locations in the list" name="Hackermaps Should render all the locations in the list" time="0.043">
+    </testcase>
+    <testcase classname="Hackermaps Should have correct buttons for each location" name="Hackermaps Should have correct buttons for each location" time="0.018">
+      <failure>Error: expect(received).toBeFalsy()
+
+Expected value to be falsy, instead received
+  &lt;button class=&quot;icon-only small mx-0&quot; data-testid=&quot;up-button&quot; /&gt;
+    at Object.&lt;anonymous&gt; (C:\Users\696449\Desktop\temp\d2cc34ab-84ac-45b1-8f4b-9cd61e80dfff\src\App.test.js:66:68)
+    at Object.asyncFn (C:\Users\696449\Desktop\temp\d2cc34ab-84ac-45b1-8f4b-9cd61e80dfff\node_modules\jest-jasmine2\build\jasmine-async.js:68:30)
+    at C:\Users\696449\Desktop\temp\d2cc34ab-84ac-45b1-8f4b-9cd61e80dfff\node_modules\jest-jasmine2\build\queueRunner.js:38:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (C:\Users\696449\Desktop\temp\d2cc34ab-84ac-45b1-8f4b-9cd61e80dfff\node_modules\jest-jasmine2\build\queueRunner.js:31:21)
+    at C:\Users\696449\Desktop\temp\d2cc34ab-84ac-45b1-8f4b-9cd61e80dfff\node_modules\p-map\index.js:46:16
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</failure>
+    </testcase>
+    <testcase classname="Hackermaps Should move the location down on clicking the down button" name="Hackermaps Should move the location down on clicking the down button" time="0.027">
+    </testcase>
+    <testcase classname="Hackermaps Should move the location up on clicking the up button" name="Hackermaps Should move the location up on clicking the up button" time="0.02">
+    </testcase>
+    <testcase classname="Hackermaps Should be in correct state after a series of actions" name="Hackermaps Should be in correct state after a series of actions" time="0.024">
+    </testcase>
+  </testsuite>
+</testsuites>

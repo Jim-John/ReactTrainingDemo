@@ -4,7 +4,7 @@
       "emp_id": "1234",
       "emp_name": "Savio",
       "claim_number": "123-123-12A",
-      "claim_type": "Received",
+      "claim_type": "Submitted",
       "claim_program": "sample claim",
       "start_date": "2020-07-16",
       "end_date": "2020-08-21",
