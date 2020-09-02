@@ -6,7 +6,6 @@ import ClaimsView from './components/claims/ClaimsView.jsx';
 import Login from './components/login/Login.jsx';
 import App from './components/common/App.jsx';
 import Home from './components/common/Home.jsx';
-import Success from  './components/common/Success.jsx'
 ReactDOM.render(
   
     <div>
@@ -17,7 +16,6 @@ ReactDOM.render(
          <Route path = "claim" component = {ClaimsView} />
          <Route path = "updateclaim/:claimId" component = {ClaimsUpdate} />
          <Route path = "login" component = {Login} />
-         <Route path = "success" component = {Success} />
    </Route>
  </Router>
 
